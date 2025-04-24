@@ -7,7 +7,9 @@ import re
 import json
 import time
 
-openai.api_key = "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"
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 세션 상태 초기화
 for key in ['extracted_text', 'translated_text', 'styled_text', 'toxic_clauses', 'last_file']:
