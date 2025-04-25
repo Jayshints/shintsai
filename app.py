@@ -47,7 +47,7 @@ def translate_text_batch(text, batch_size=5):
             for attempt in range(3):
                 try:
                     response = openai.chat.completions.create(
-                        model="gpt-4-turbo",
+                        model="gpt-4o",
                         messages=[
                             {"role": "system", "content": (
                                 "You are a legal translator. Translate the following English contract paragraphs into formal Korean. "
@@ -91,7 +91,7 @@ def detect_toxic_clauses_batch(original_text, translated_text, batch_size=8):
         for attempt in range(3):
             try:
                 response = openai.chat.completions.create(
-                    model="gpt-4-turbo",
+                    model="gpt-4o",
                     messages=[
                         {"role": "system", "content": (
                             "You are a legal expert. For each contract paragraph pair, identify toxic clauses.\n\n"
