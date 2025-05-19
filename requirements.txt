@@ -3,3 +3,4 @@ openai>=1.10.0
 pdfplumber>=0.10.0
 mammoth  # 이름에서 'python-' 제거 (진짜 패키지명은 이거예요!)
 python-dotenv
+python-docx
